@@ -6,4 +6,8 @@
 
 在release中下载最新的安装包，双击安装到Alfred中
 
+```shell
+pip3 install whois
+```
+
 ![image:2](./example.png)
