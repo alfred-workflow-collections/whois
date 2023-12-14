@@ -10,6 +10,10 @@
 pip3 install whois
 ```
 
+```shell
+whois alfredforum.com
+```
+
 ![image:2](./example.png)
 
 # 更新
