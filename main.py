@@ -4,6 +4,7 @@
 import sys
 import whois
 import json
+import socket
 
 
 def get_whois_info(domains):
@@ -14,6 +15,7 @@ def get_whois_info(domains):
     emails = ";".join(domain.emails)
     creation = domain.creation_date.strftime("%Y年%m月%d %H:%M:%S")
     expiration = domain.expiration_date.strftime("%Y年%m月%d %H:%M:%S")
+    ip = socket.gethostbyname(domains)
 
     items = [{
         "title": name,
@@ -51,7 +53,14 @@ def get_whois_info(domains):
         "arg": expiration,
         'icon': {'path': 'tixing.png'},
         "valid": "True"
-    }]
+    }, {
+        "title": ip,
+        "subtitle": "域名解析的地址",
+        "arg": ip,
+        'icon': {'path': 'IP.png'},
+        "valid": "True"
+    }
+    ]
 
     return json.dumps({'items': items})
 

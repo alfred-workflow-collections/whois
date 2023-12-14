@@ -11,3 +11,11 @@ pip3 install whois
 ```
 
 ![image:2](./example.png)
+
+# 更新
+
+- v1.0.1
+
+新增域名解析的ip展示
+
+![img.png](img.png)
